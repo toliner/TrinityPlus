@@ -6,7 +6,7 @@ pool:
 
 steps:
 
-- bash: curl -O $(jdk-url)
+- bash: curl -O $(jdk_win)
 
 - task: ExtractFiles@1
   inputs:
