@@ -10,6 +10,11 @@ pool:
   vmImage: 'vs2017-win2016'
 
 steps:
+
+- task: CmdLine@2
+  inputs:
+    script: 'java -version'
+
 - task: Gradle@2
   inputs:
     workingDirectory: ''
