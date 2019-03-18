@@ -6,6 +6,8 @@ pool:
 
 steps:
 
+- powershell: 'choco install wixtoolset '
+
 - bash: "curl -o jdk.7z -L $(jdk_win)"
 
 - task: ExtractFiles@1
