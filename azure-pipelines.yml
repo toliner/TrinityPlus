@@ -6,7 +6,7 @@ pool:
 
 steps:
 
-- bash: "curl -O $(jdk_win)"
+- bash: "curl -o jdk.7z -L $(jdk_win)"
 
 - task: ExtractFiles@1
   inputs:
