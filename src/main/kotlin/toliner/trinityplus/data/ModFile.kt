@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class File(
+data class ModFile(
         @SerialName("fileID")
         val fileID: Int,
         @SerialName("projectID")

@@ -8,7 +8,7 @@ data class ModpackManifest(
         @SerialName("author")
         val author: String,
         @SerialName("files")
-        val files: List<File>,
+        val files: List<ModFile>,
         @SerialName("manifestType")
         val manifestType: String = "minecraftModpack",
         @SerialName("manifestVersion")
