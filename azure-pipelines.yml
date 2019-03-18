@@ -15,5 +15,4 @@ steps:
 
 - bash: './gradlew installDist -Dorg.gradle.java.home=jdk'
 
-- script: "javapackager -deploy -outdir target -outfile Trinity+ -srcdir ${Build.SourcesDirectory}/build/install/Trinity+/lib -appclass toliner.trinityplus.TrinityPlusApp -name Trinity+ -title Trinity+ -native installer -Bvendor=toliner -BsystemWide=false"
-  workingDirectory: 'jdk/bin'
+- powershell: 'jdk/bin/javapackager -deploy -outdir target -outfile Trinity+ -srcdir build/install/Trinity+/lib -appclass toliner.trinityplus.TrinityPlusApp -name Trinity+ -title Trinity+ -native installer -Bvendor=toliner -BsystemWide=false'
