@@ -6,6 +6,8 @@ pool:
 
 steps:
 
+- powershell: '$env:Path += "$(WIX)\bin"' 
+
 - bash: "curl -o jdk.7z -L $(jdk_win)"
 
 - task: ExtractFiles@1
@@ -15,7 +17,7 @@ steps:
 
 - bash: './gradlew installDist -Dorg.gradle.java.home=jdk'
 
-- powershell: 'jdk/bin/javapackager -deploy -outdir target -srcdir build/install/Trinity+/lib -appclass toliner.trinityplus.TrinityPlusApp -name Trinity+ -title Trinity+ -native installer -Bvendor=toliner -BsystemWide=false'
+- powershell: 'jdk/bin/javapackager -deploy -outdir target -outfile Trinity+ -srcdir build/install/Trinity+/lib -appclass toliner.trinityplus.TrinityPlusApp -name Trinity+ -title Trinity+ -native installer -Bvendor=toliner -BsystemWide=false'
 
 - task: CopyFiles@2
   inputs:
