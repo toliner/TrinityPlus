@@ -25,7 +25,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: 'target\**\*.exe'
+    contents: 'target\**\?(*.exe|*.msi)'
     targetFolder: '$(Build.ArtifactStagingDirectory)'
     overWrite: true #Optional
 
