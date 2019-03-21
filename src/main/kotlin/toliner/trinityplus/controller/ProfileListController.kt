@@ -7,6 +7,14 @@ import tornadofx.*
 
 class ProfileListController : Controller() {
 
+    init {
+        ProfileManagementModel.profileListController = this
+    }
 
     fun getProfileList(): ObservableList<Profile> = ProfileManagementModel.profiles
+
+    fun hasUpdate(profile: Profile): Boolean {
+        //ToDo
+        return false
+    }
 }
