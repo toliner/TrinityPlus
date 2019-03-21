@@ -14,5 +14,7 @@ data class Profile(
         @SerialId(4)
         val isUnlocked: Boolean,
         @SerialId(5)
-        val lastPlayed: String
+        val lastPlayed: String,
+        @SerialId(6)
+        val icon: String // uri to icon.
 )
