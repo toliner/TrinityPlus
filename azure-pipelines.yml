@@ -20,7 +20,7 @@ steps:
 
 - powershell: |
     $env:PATH += (";" + $env:WIX + "bin")
-    jdk/bin/javapackager -deploy -outdir target -outfile Trinity+ -srcdir build/install/Trinity+/lib -appclass toliner.trinityplus.TrinityPlusApp -name Trinity+ -title Trinity+ -native installer -Bvendor=toliner -BsystemWide=false
+    jdk/bin/javapackager -deploy -outdir target -outfile Trinity+ -srcdir build/install/Trinity+/lib -appclass toliner.trinityplus.app.TrinityPlusApp -name Trinity+ -title Trinity+ -native installer -Bvendor=toliner -BsystemWide=false
   name: 'package'
 
 - task: CopyFiles@2
