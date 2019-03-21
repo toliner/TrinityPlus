@@ -1,12 +1,18 @@
 package toliner.trinityplus.data
 
+import kotlinx.serialization.SerialId
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class Profile(
+        @SerialId(1)
         val name: String,
-        val isUnlocked: Boolean,
-        val lastPlayed: String,
+        @SerialId(2)
+        val uuid: String,
+        @SerialId(3)
         val manifest: ModpackManifest,
-        val uuid: String
+        @SerialId(4)
+        val isUnlocked: Boolean,
+        @SerialId(5)
+        val lastPlayed: String
 )
